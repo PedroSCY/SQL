@@ -1,0 +1,24 @@
+use tipos_dados;
+drop table if EXISTS aluno;
+
+
+create table aluno(
+    matricula char(10),
+    nome varchar(80), 
+    recomendacao text, 
+    semestre tinyint unsigned,
+    creditos_cursados smallint,
+    media_geral float,
+    data_ingresso date,
+    data_conclusao date,
+    horas_estudadas time,
+    bolsista boolean,
+    turno_estudo enum("Manhã","Tarde", "Integral")
+);
+
+desc aluno
+
+insert into aluno VALUES( '123456789A', "Pedro Lucas Prata", "É um aluno exemplar",1 , 50, 8.9, "2019-02-03", "2023-12-23", "574:36:00", 0, "Manhã");
+
+
+select * from tipos_dados.aluno;
